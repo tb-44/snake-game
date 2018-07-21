@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<title>Snake Game</title>
+    <title>Snake Game</title>
     <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
 
   </head>
@@ -206,6 +206,7 @@
        */
       if (changingDirection) return;
       changingDirection = true;
+      
       const keyPressed = event.keyCode;
       const goingUp = dy === -10;
       const goingDown = dy === 10;
@@ -215,14 +216,17 @@
         dx = -10;
         dy = 0;
       }
+      
       if (keyPressed === UP_KEY && !goingDown) {
         dx = 0;
         dy = -10;
       }
+      
       if (keyPressed === RIGHT_KEY && !goingLeft) {
         dx = 10;
         dy = 0;
       }
+      
       if (keyPressed === DOWN_KEY && !goingUp) {
         dx = 0;
         dy = 10;
